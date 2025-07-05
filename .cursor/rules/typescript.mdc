@@ -1,0 +1,35 @@
+---
+description: TypeScript development guidelines
+globs: *.ts,*.tsx
+alwaysApply: false
+---
+<typescript-guidelines>
+
+<title>TypeScript Development Guidelines</title>
+
+<testing>
+- Use vitest for all tests
+- Unit tests: `.spec.ts` extension (matches file being tested)
+- Integration tests: `.test.ts` extension (descriptive names)
+- Error variables: use `e` or `err`, never `error`
+
+<examples>
+<example type="file-naming">
+my-file.ts → my-file.spec.ts
+user-auth.test.ts (integration)
+</example>
+
+<example type="error-handling">
+```typescript
+// Good
+catch (e) { }
+catch (err) { }
+
+// Bad
+catch (error) { }
+```
+</example>
+</examples>
+</testing>
+
+</typescript-guidelines>
